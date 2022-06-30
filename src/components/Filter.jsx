@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
 function Filter() {
-  return(
+  return (
     <aside>
       <h5>Refine sua busca</h5>
       <p>Por preço</p>
-      <form style={{ display:"flex", flexDirection:"column" }}>
+      <form style={{display: 'flex', flexDirection: 'column'}}>
         <label>
           <input type="radio" name="price" value="40"/>
           Até R$40
@@ -24,7 +24,7 @@ function Filter() {
         </label>
         <label>
           <input type="radio" name="price" value="200-500"/>
-          R$200 A R$500        
+          R$200 A R$500
         </label>
         <label>
           <input type="radio" name="price" value=">500"/>
@@ -32,7 +32,7 @@ function Filter() {
         </label>
       </form>
     </aside>
-  )
+  );
 }
 
-export default Filter
+export default Filter;

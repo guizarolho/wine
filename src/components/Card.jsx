@@ -6,6 +6,15 @@ const AddButton = styled.button`
   background: yellowgreen;
   color: white;
   border: none;
+  &:hover {
+    background: green;
+    transition: all 0.2s ease-in-out;  
+  };
+  &:active {
+    background: lightgrey;
+    color: grey;
+    transition: all 0.15s ease-in-out;  
+  };
 `;
 
 const PriceTag = styled.h6`
@@ -32,17 +41,26 @@ function Card(props) {
   };
 
   return (
-    <>
-      <div>
-        <img src={element.image} />
-        <h3>{element.name}</h3>
+    <div style={{
+      'display': 'flex',
+      'flexDirection': 'column',
+      'justifyContent': 'center',
+      'alignSelf': 'center',
+    }}>
+      <div style={{
+        'display': 'flex',
+        'flexDirection': 'column',
+        'alignItems': 'center',
+      }}>
+        <img src={element.image} height='40%' width='40%'/>
+        <h5>{element.name}</h5>
         <PriceTag>SÓCIO WINE {formatter.format(element.priceMember)}</PriceTag>
         <h6>NÃO SÓCIO {formatter.format(element.priceNonMember)}</h6>
       </div>
       <AddButton onClick={() => addToCart()}>
         ADICIONAR
       </AddButton>
-    </>
+    </div>
   );
 }
 

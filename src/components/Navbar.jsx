@@ -1,6 +1,7 @@
 import React from 'react';
 import Icons from './Icons';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Nav = styled.nav`
   display: flex;
@@ -10,18 +11,29 @@ const Nav = styled.nav`
   border-bottom-color: grey;
 `;
 
-function Navbar() {
+const Anchor = styled.a`
+  text-decoration: none;
+  color: grey;
+  line-height: 24px;
+`;
+
+function Navbar(props) {
+  const {func} = props;
   return (
     <Nav>
       <img src={require('../logo.png')} alt='logo' width='108px' height='30px'/>
-      <a href='/clube'>Clube</a>
-      <a href='/loja'>Loja</a>
-      <a href='/produtores'>Produtores</a>
-      <a href='/ofertas'>Ofertas</a>
-      <a href='/eventos'>Eventos</a>
-      <Icons />
+      <Anchor href='/clube'>Clube</Anchor>
+      <Anchor href='/loja'>Loja</Anchor>
+      <Anchor href='/produtores'>Produtores</Anchor>
+      <Anchor href='/ofertas'>Ofertas</Anchor>
+      <Anchor href='/eventos'>Eventos</Anchor>
+      <Icons func={func}/>
     </Nav>
   );
 }
+
+Navbar.propTypes = {
+  func: PropTypes.func.isRequired,
+};
 
 export default Navbar;

@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import Navbar from './components/Navbar';
 import Filter from './components/Filter';
+import Card from './components/Card';
 import requestProducts from './utils/request';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
     <main>
       <Navbar />
       <Filter />
+      {products.map((e, index) => <Card key={index} element={e} />)}
     </main>
   );
 }

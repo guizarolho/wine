@@ -1,13 +1,13 @@
-import React from 'react'
+import React from 'react';
 
 function Icons() {
-  return(
+  return (
     <div>
-      <p style={{ display:"inline" }}>Search</p>
-      <p style={{ display:"inline" }}>Profile</p>
-      <p style={{ display:"inline" }}>Cart</p>
+      <p style={{display: 'inline'}}>Search</p>
+      <p style={{display: 'inline'}}>Profile</p>
+      <p style={{display: 'inline'}}>Cart</p>
     </div>
-  )
+  );
 }
 
-export default Icons
+export default Icons;

@@ -17,6 +17,13 @@ function App() {
     fetchProducts();
   }, []);
 
+  useEffect(() => {
+    const cart = localStorage.getItem('cart');
+    if (!cart) {
+      localStorage.setItem('cart', JSON.stringify([]));
+    }
+  }, []);
+
   return (
     <main>
       <Navbar />

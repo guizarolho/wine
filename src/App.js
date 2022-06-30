@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Filter from './components/Filter';
 import Card from './components/Card';
 import requestProducts from './utils/request';
+import './index.css';
 
 function App() {
   const [products, setProducts] = useState([]);

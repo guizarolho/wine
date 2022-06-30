@@ -1,5 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const AddButton = styled.button`
+  background: palevioletred
+`;
 
 function Card(props) {
   // const element = require('../mocks/mockwine.json');
@@ -18,9 +23,9 @@ function Card(props) {
         <h6>SÓCIO WINE {formatter.format(element.priceMember)}</h6>
         <h6>NÃO SÓCIO {formatter.format(element.priceNonMember)}</h6>
       </div>
-      <button>
-      Adicionar
-      </button>
+      <AddButton>
+        Adicionar
+      </AddButton>
     </>
   );
 }

@@ -4,7 +4,7 @@ import Icons from './Icons';
 function Navbar() {
   return (
     <nav style={{display: 'flex', flexDirection: 'row', gap: '10px'}} >
-      <img src='/src/wine.svg' alt='logo'/>
+      <img src={require('../logo.png')} alt='logo' width='108px' height='30px'/>
       <a href='/clube'>Clube</a>
       <a href='/loja'>Loja</a>
       <a href='/produtores'>Produtores</a>

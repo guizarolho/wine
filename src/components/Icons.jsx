@@ -1,13 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const StyledText = styled.p`
+  display: inline;
+`;
 
 function Icons(props) {
   const {func} = props;
   return (
     <div>
-      <p style={{display: 'inline'}}>Search</p>
-      <p style={{display: 'inline'}}>Profile</p>
-      <p style={{display: 'inline'}}>Cart</p>
+      <StyledText>Search</StyledText>
+      <StyledText>Profile</StyledText>
+      <StyledText>Cart</StyledText>
       <input type='text' onChange={(({target}) => func(target.value))} />
     </div>
   );

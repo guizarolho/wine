@@ -13,3 +13,9 @@ Este projeto propõe criar uma loja virtual utilizando o catálogo de produtos d
 - npm start
 
 Pronto! A aplicação já deve estar disponível no seu navegador.
+
+# Objetivos Futuros:
+- Realizar testes unitários;
+- Habilitar a página de detalhes do produto;
+- Aplicar estilo a outros elementos;
+- Permitir a remoção do filtro radio. 

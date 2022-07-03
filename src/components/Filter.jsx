@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 
 function Filter(props) {
   const {func, range} = props;
-  const handleChange = (event) => {
-    if (event.target.value === range) {
-      return func('');
-    } else {
-      return func(event.target.value);
+  const handleChange = ({target}) => {
+    const {checked, value} = target;
+    if (checked && range === value) {
+      target.removeAttribute(checked);
+      func('');
     }
+    func(value);
   };
 
   return (
@@ -20,7 +21,8 @@ function Filter(props) {
           <input
             type="radio"
             name="price"
-            value="40"
+            value='40'
+            checked={range === '40'}
             onChange={handleChange}
           />
           Até R$40
@@ -30,6 +32,7 @@ function Filter(props) {
             type="radio"
             name="price"
             value="40-60"
+            checked={range === '40-60'}
             onChange={handleChange}
           />
           R$40 A R$60
@@ -39,6 +42,7 @@ function Filter(props) {
             type="radio"
             name="price"
             value="60-100"
+            checked={range === '60-100'}
             onChange={handleChange}
           />
           R$60 A R$100
@@ -48,6 +52,7 @@ function Filter(props) {
             type="radio"
             name="price"
             value="100-200"
+            checked={range === '100-200'}
             onChange={handleChange}
           />
           R$100 A R$200
@@ -57,6 +62,7 @@ function Filter(props) {
             type="radio"
             name="price"
             value="200-500"
+            checked={range === '200-500'}
             onChange={handleChange}
           />
           R$200 A R$500
@@ -66,6 +72,7 @@ function Filter(props) {
             type="radio"
             name="price"
             value=">500"
+            checked={range === '>500'}
             onChange={handleChange}
           />
           Acima de R$500

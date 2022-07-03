@@ -63,7 +63,6 @@ function App() {
               .map((e, index) => <Card key={index} element={e} />)}
         </div>
       </section>
-      <p>{range}</p>
     </main>
   );
 }
